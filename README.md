@@ -1,4 +1,6 @@
 # PORTOFOLIO 2
 
-Link :
+Draft
+
+Link : https://puteraparta.github.io/porto_2/
 
