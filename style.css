@@ -1,0 +1,345 @@
+.sidebar {
+  z-index: 9999;
+  overflow-y: scroll;
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 30em) {
+  .sidebar {
+    max-height: calc(100vh - 2rem);
+    height: auto;
+    width: 460px;
+  }
+}
+
+.markerActive {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  /* Move up 4px and left 4px to account for border,
+    to make sure the active marker doesn't move */
+  margin: -24px 0 0 -24px !important;
+}
+
+.leaflet-marker-icon:hover {
+  opacity: 0.8;
+}
+
+a {
+  color: #528e9e;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.leaflet-control {
+  border: 1px solid rgba(0, 0, 0, 0.1) ;
+  border-radius: 2px ;
+}
+
+.leaflet-control-layers-expanded {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+.leaflet-control-layers-expanded label {
+  cursor: pointer;
+}
+
+.leaflet-control-layers-expanded label:hover {
+  opacity: 0.8;
+}
+
+.home-button {
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  padding: 3px;
+  cursor: pointer !important;
+  border: 1px solid black;
+}
+
+.home-button:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+#gallery {
+  position: relative;
+}
+
+.material-icons.arrow {
+  font-size: 60px;
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  text-shadow: 0 0 4px gray;
+}
+
+.material-icons.arrow.arrow-left {
+  left: 0;
+}
+
+.material-icons.arrow.arrow-right {
+  right: 0;
+  margin-right: 60px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgb(200, 200, 200);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+td,
+th {
+  border: 1px solid rgb(65, 50, 50);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(255, 255, 255);
+}
+
+td {
+  text-align: left;
+}
+
+/* tr:nth-child(even) td {
+  background-color: rgb(219, 195, 195);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(255, 255, 255);
+} */
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+
+.leaflet-sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 710px;
+  opacity: 0.9;
+  overflow: hidden;
+  z-index: 2000; }
+  .leaflet-sidebar.collapsed {
+    width: 40px; }
+  @media (min-width: 491px) {
+    .leaflet-sidebar {
+      top: 10px;
+      bottom: 10px;
+      transition: width 500ms; } }
+  @media (min-width: 491px) and (max-width: 991px) {
+    .leaflet-sidebar {
+      width: 490px;
+      max-width: 490px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .leaflet-sidebar {
+      width: 5000px;
+      max-width: 500px; } }
+  @media (min-width: 1200px) {
+    .leaflet-sidebar {
+      width: 460px;
+      max-width: 460px; } }
+
+.leaflet-sidebar-left {
+  left: 0; }
+  @media (min-width: 768px) {
+    .leaflet-sidebar-left {
+      left: 10px; } }
+
+.leaflet-sidebar-right {
+  right: 0; }
+  @media (min-width: 768px) {
+    .leaflet-sidebar-right {
+      right: 10px; } }
+
+.leaflet-sidebar-tabs {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: none;
+  opacity: 0.9; }
+  .leaflet-sidebar-left .leaflet-sidebar-tabs {
+    left: 0; }
+  .leaflet-sidebar-right .leaflet-sidebar-tabs {
+    right: 0; }
+  .leaflet-sidebar-tabs, .leaflet-sidebar-tabs > ul {
+    position: absolute;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .leaflet-sidebar-tabs > li, .leaflet-sidebar-tabs > ul > li {
+      width: 100%;
+      height: 40px;
+      color: #333;
+      background-color:  rgb(255, 255, 255);
+      font-size: 12pt;
+      overflow: hidden;
+      transition: all 80ms; }
+      .leaflet-sidebar-tabs > li:hover, .leaflet-sidebar-tabs > ul > li:hover {
+        color: #000;
+        background-color: rgb(234, 234, 234); }
+      .leaflet-sidebar-tabs > li.active, .leaflet-sidebar-tabs > ul > li.active {
+        color: #fff;
+        background-color: #0074d9; }
+      .leaflet-sidebar-tabs > li.disabled, .leaflet-sidebar-tabs > ul > li.disabled {
+        color: rgba(51, 51, 51, 0.4); }
+        .leaflet-sidebar-tabs > li.disabled:hover, .leaflet-sidebar-tabs > ul > li.disabled:hover {
+          background: transparent; }
+        .leaflet-sidebar-tabs > li.disabled > a, .leaflet-sidebar-tabs > ul > li.disabled > a {
+          cursor: default; }
+      .leaflet-sidebar-tabs > li > a, .leaflet-sidebar-tabs > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+        color: inherit;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer; }
+  .leaflet-sidebar-tabs > ul + ul {
+    bottom: 0; }
+
+.leaflet-sidebar-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
+  background-color:  rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .leaflet-sidebar-left .leaflet-sidebar-content {
+    left: 40px;
+    right: 0; }
+  .leaflet-sidebar-right .leaflet-sidebar-content {
+    left: 0;
+    right: 40px; }
+  .leaflet-sidebar.collapsed > .leaflet-sidebar-content {
+    overflow-y: hidden; }
+
+.collapsed > .leaflet-sidebar-content {
+  overflow-y: hidden; }
+
+.leaflet-sidebar-pane {
+  display: none;
+  left: 0;
+  right: 0;
+  padding: 0px 20px; }
+  .leaflet-sidebar-pane.active {
+    display: block; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .leaflet-sidebar-pane {
+      min-width: 265px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .leaflet-sidebar-pane {
+      min-width: 350px; } }
+  @media (min-width: 1200px) {
+    .leaflet-sidebar-pane {
+      min-width: 420px; } }
+
+.leaflet-sidebar-header {
+  margin: -10px -20px 0;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  font-size: 14.4pt;
+  color: #fff;
+  background-color: #0074d9; }
+  .leaflet-sidebar-right .leaflet-sidebar-header {
+    padding-left: 40px; }
+
+.leaflet-sidebar-close {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer; }
+  .leaflet-sidebar-left .leaflet-sidebar-close {
+    right: 0; }
+  .leaflet-sidebar-right .leaflet-sidebar-close {
+    left: 0; }
+
+.leaflet-sidebar {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.65) !important; }
+  .leaflet-sidebar.leaflet-touch {
+    box-shadow: none!important;
+    border-right: 0px none rgba(0, 0, 0, 0.2)!important; }
+  @media (min-width: 768px) {
+    .leaflet-sidebar {
+      border-radius: 0px!important; }
+      .leaflet-sidebar.leaflet-touch {
+        border: 0px none rgba(0, 0, 0, 0.2)!important; } }
+
+@media (min-width: 768px) {
+  .leaflet-sidebar-left ~ .leaflet-control-container .leaflet-left {
+    transition: left 500ms; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .leaflet-sidebar-left ~ .leaflet-control-container .leaflet-left {
+    left: 315px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .leaflet-sidebar-left ~ .leaflet-control-container .leaflet-left {
+    left: 400px; } }
+
+@media (min-width: 1200px) {
+  .leaflet-sidebar-left ~ .leaflet-control-container .leaflet-left {
+    left: 470px; } }
+
+@media (min-width: 768px) {
+  .leaflet-sidebar-left.collapsed ~ .leaflet-control-container .leaflet-left {
+    left: 50px; } }
+
+@media (min-width: 768px) {
+  .leaflet-sidebar-right ~ .leaflet-control-container .leaflet-right {
+    transition: right 500ms; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .leaflet-sidebar-right ~ .leaflet-control-container .leaflet-right {
+    right: 315px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .leaflet-sidebar-right ~ .leaflet-control-container .leaflet-right {
+    right: 400px; } }
+
+@media (min-width: 1200px) {
+  .leaflet-sidebar-right ~ .leaflet-control-container .leaflet-right {
+    right: 470px; } }
+
+@media (min-width: 768px) {
+  .leaflet-sidebar-right.collapsed ~ .leaflet-control-container .leaflet-right {
+    right: 50px; } }
